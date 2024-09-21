@@ -15,6 +15,7 @@ num_days_week = float(input("Enter the number of days per week:"))
 num_weeks_month = int(input("Enter the number of weeks per month:"))
 
 
+
 # Setting up the formula for the gross income.
 gross_income = round(num_hrs_day * num_days_week * num_weeks_month * rate_hr)
 
