@@ -1,40 +1,35 @@
 # Initializing values
-basic_pay = 0
-overtime_pay = 0
-absences = 0
-tardiness = 0
-honorary=0
 gross_income = 0
 deduction = 0
 net_pay = 0
 HDMF = 100
-company_name = ""
-employee_name = ""
-employee_department = ""
-employee_number = 0
-
 
 #Imput of variables
+company_name = str(input("Enter the company name: "))
 employee_name = str(input("Enter the employee's name: "))
-employee_number = str(input("Enter employee number: "))
+employee_number = str(input("Enter employee code: "))
 employee_department = str(input("Enter employee's department: "))
-pay_period = str(input("Enter salary date cut-off: "))
+pay_period_start = str(input("Enter the start date of pay period (mm/dd/yy): "))
+pay_period_end = str(input("Enter the end date of pay period (mm/dd/yy): "))
 rate_hour = float(input("Enter employee's rate per hour: "))
-num_hrs_days = float(input("Enter employee's number of hours per day: "))
+num_hrs_days = float(input("Enter employee's number of hours per payday: "))
 num_hrs_ot = float(input("Enter employee's number of overtime in hours per payday: "))
 num_hrs_absents = float(input("Enter employee's number of absences in hours per payday: "))
-honorarium = float(input("Enter the amount of volunteer hours worked by the employee: "))
-tardiness = float(input("Enter employee's tardiness in hours per payday: "))
+num_hrs_tardy = float(input("Enter employee's tardiness in hours per payday: "))
+num_hrs_honor = float(input("Enter the amount of volunteer hours worked by the employee: "))
 
 # Computing gross earnings
 basic_pay = rate_hour * num_hrs_days
 overtime_pay = rate_hour * num_hrs_ot
-honorary = rate_hour * honorarium
+honorarium = rate_hour * num_hrs_honor
 
 # Computing Gross Income
-gross_income = basic_pay + overtime_pay + honorary
+gross_income = basic_pay + overtime_pay + honorarium
 
 # Computing value for deductions
+tardiness = num_hrs_tardy * rate_hour
+absences = num_hrs_absents * rate_hour
+
 if gross_income > 29750:
     sss_cont = 900
     phil_cont = gross_income * 0.05
@@ -193,16 +188,16 @@ else:
     phil_cont = 0
 
 # Computing value for tax
-if gross_income >= 666667:
-    tax_cont = 183541.80 + (gross_income * 0.35)
-elif gross_income >= 166667:
-    tax_cont = 33541.80 + (gross_income * 0.30)
-elif gross_income >= 66667:
-    tax_cont = 8541.80 + (gross_income * 0.25)
+if gross_income >= 333333:
+    tax_cont = 91770.70 + ((gross_income - 333333) * 0.35)
+elif gross_income >= 83333:
+    tax_cont = 16770.70 + ((gross_income - 83333) * 0.30)
 elif gross_income >= 33333:
-    tax_cont = 1875 + (gross_income * 0.20)
-elif gross_income >= 20833:
-    tax_cont = gross_income * 0.15
+    tax_cont = 4270.70 + ((gross_income - 33333 )* 0.25)
+elif gross_income >= 16667:
+    tax_cont = 937.50 + ((gross_income - 16667)* 0.20)
+elif gross_income >= 10417:
+    tax_cont = (gross_income - 10417) * 0.15
 else:
     tax_cont = 0
 
@@ -212,14 +207,24 @@ deduction = absences + tardiness + tax_cont + sss_cont + phil_cont + HDMF
 # Compute
 net_pay = gross_income - deduction
 
-print(f"Final pay: {net_pay}")
-
-
-
-
-
-
-
+print(f"Company: {company_name}")
+print(f"Employee Name: {employee_name}")
+print(f"Employee Code: {employee_number}")
+print(f"Department: {employee_department}")
+print(f"Salary cut-off: {pay_period_end}")
+print(f"Pay period: {pay_period_start} to {pay_period_end}")
+print(f"Basic pay: {basic_pay}")
+print(f"Overtime: {overtime_pay}")
+print(f"Honorarium: {honorarium}")
+print(f"Absences: {absences}")
+print(f"Tardiness: {tardiness}")
+print(f"Withholding Tax: {tax_cont}")
+print(f"SSS Contribution: {sss_cont}")
+print(f"HDMF Contribution: {HDMF}")
+print(f"Philhealth Contribution: {phil_cont}")
+print(f"Deductions: {deduction}")
+print(f"Gross Earnings: {gross_income}")
+print(f"Net pay: {net_pay}")
 
 
 
