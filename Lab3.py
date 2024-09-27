@@ -4,7 +4,7 @@ deduction = 0
 net_pay = 0
 HDMF = 100
 
-#Imput of variables
+# Imput of variables
 company_name = str(input("Enter the company name: "))
 employee_name = str(input("Enter the employee's name: "))
 employee_number = str(input("Enter employee code: "))
@@ -112,9 +112,9 @@ if gross_income >= 333333:
 elif gross_income >= 83333:
     tax_cont = 16770.70 + ((gross_income - 83333) * 0.30)
 elif gross_income >= 33333:
-    tax_cont = 4270.70 + ((gross_income - 33333 )* 0.25)
+    tax_cont = 4270.70 + ((gross_income - 33333) * 0.25)
 elif gross_income >= 16667:
-    tax_cont = 937.50 + ((gross_income - 16667)* 0.20)
+    tax_cont = 937.50 + ((gross_income - 16667) * 0.20)
 elif gross_income >= 10417:
     tax_cont = (gross_income - 10417) * 0.15
 else:
