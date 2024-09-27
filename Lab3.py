@@ -99,7 +99,9 @@ else:
     sss_cont = 180
 
 #Computing for Philhealth contribution
-if gross_income >= 10000:
+if gross_income >= 100000:
+    phil_cont = 100000 * 0.05
+elif gross_income >= 10000:
     phil_cont = gross_income * 0.05
 else:
     phil_cont = 0
