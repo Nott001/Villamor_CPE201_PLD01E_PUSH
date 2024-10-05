@@ -4,7 +4,7 @@ deduction = 0
 net_pay = 0
 HDMF = 100
 
-# Imput of variables
+# Input of variables
 company_name = str(input("Enter the company name: "))
 employee_name = str(input("Enter the employee's name: "))
 employee_number = str(input("Enter employee code: "))
