@@ -52,6 +52,7 @@ class Assessment:
         self.technology_fee = float(input("Enter technology fee: "))
         self.test_papers = float(input("Enter test papers fee: "))
         self.down_payment = float(input("Enter down payment: "))
+        self.all_units_fee = 0
         self.assessment_amount = 0
         self.total_due = 0
         self.prelim_payment = 0
@@ -68,7 +69,7 @@ class Assessment:
             self.cultural_fee + self.energy_cost + self.guidance + self.insurance_fee +
             self.learning_man_sys + self.library_fee + self.medical_dental + self.registration +
             self.rso + self.students_activity + self.nurturance + self.technology_fee +
-            self.test_papers + self.down_payment
+            self.test_papers
         )
 
     def total_due_payment(self):
@@ -79,6 +80,7 @@ class Assessment:
 
     def display_assessment_details(self):
         print("\nAssessment Details:")
+        print(f"Tuition Fee Lecture: {self.all_units_fee}")
         print(f"Total Assessment Amount: {self.assessment_amount}")
         print(f"Down Payment: {self.down_payment}")
         print(f"Total Due: {self.total_due}")
