@@ -24,11 +24,13 @@ class Student:
         info.append("\t\t\t2nd Semester, 2022-2023\t\t\t")
         info.append(f"NAME\t: {self.student_name:<25} COURSE\t: {self.student_course}")
         info.append(f"STUDENT NO.\t: {self.student_number:<20} ACAD. YEAR\t: {self.student_year}")
-        info.append("-----------------------------------------------------------------")
-        info.append("SECTION\t\t\tSUBJECT\t\t\t\tUNITS")
-        info.append("-----------------------------------------------------------------")
+        info.append("-------------------------------------------------------------------")
+        info.append("SECTION\t\t\t\tSUBJECT                                 UNITS")
+        info.append("-------------------------------------------------------------------")
         for data in self.all_data:
-            info.append(f"{data[1]:<15} {data[0]:<25} {data[2]}")
+            info.append(f"{data[1]:<15} {data[0]:<45} {data[2]}")
+        info.append(f"                                       Total Units: {self.total_units}")
+        info.append(f"            Date Printed:{self.current_date}")
         return info
 
     def display_student_data(self):
@@ -80,40 +82,50 @@ class Assessment:
 
     def get_assessment_details(self):
         details = []
-        details.append("--------------------------------------------")
-        details.append("|        ASSESSMENT OF FEES        |")
-        details.append("|--------------------------------------------|")
-        details.append(f"| TUITION FEE LECTURE    {self.all_units_fee:<5} |")
-        details.append(f"| AdU CHRONICLE          {self.adu_chronicle:<5} |")
-        details.append(f"| ATHLETIC               {self.athletic:<5} |")
-        details.append(f"| AUDIO-VISUAL LIBRARY   {self.audio_visual_lib:<5} |")
-        details.append(f"| AUSG                   {self.ausg:<5} |")
-        details.append(f"| CULTURAL FEE           {self.cultural_fee:<5} |")
-        details.append(f"| ENERGY COST, AIRCON CLASSROOM {self.energy_cost:<5} |")
-        details.append(f"| GUIDANCE               {self.guidance:<5} |")
-        details.append(f"| INSURANCE FEE          {self.insurance_fee:<5} |")
-        details.append(f"| LEARNING MANAGEMENT SYSTEM {self.learning_man_sys:<5} |")
-        details.append(f"| LIBRARY FEE            {self.library_fee:<5} |")
-        details.append(f"| MEDICAL AND DENTAL     {self.medical_dental:<5} |")
-        details.append(f"| REGISTRATION           {self.registration:<5} |")
-        details.append(f"| RSO                    {self.rso:<5} |")
-        details.append(f"| STUDENT ACTIVITIES FEE {self.students_activity:<5} |")
-        details.append(f"| STUDENT NURTURANCE FEE {self.nurturance:<5} |")
-        details.append(f"| TECHNOLOGY FEE         {self.technology_fee:<5} |")
-        details.append(f"| TEST PAPERS            {self.test_paper:<5} |")
-        details.append("|--------------------------------------------|")
-        details.append(f"| Assessment Amt.:       {self.assessment_amount:<5} |")
-        details.append(f"| Downpayment:           {self.down_payment:<5} |")
-        details.append("|--------------------------------------------|")
-        details.append("|   Schedule of Payment             |")
-        details.append("|   of outstanding balance          |")
-        details.append("|   after downpayment prior to      |")
-        details.append("|--------------------------------------------|")
-        details.append(f"| PRELIMS               {self.prelim_payment:<5} |")
-        details.append(f"| MIDTERMS              {self.midterm_payment:<5} |")
-        details.append(f"| FINALS                {self.final_payment:<5} |")
-        details.append("|--------------------------------------------|")
-        details.append("   THIS IS A TEMPORARY ASSESSMENT")
+        details.append("\n")
+        details.append("\n")
+        details.append("\n")
+        details.append("\n")
+        details.append("------------------------------------------------")
+        details.append("        ASSESSMENT OF FEES               ")
+        details.append("|------------------------------------------------|")
+        details.append(f"| TUITION FEE LECTURE           {self.all_units_fee:<5} |")
+        details.append(f"| AdU CHRONICLE                   {self.adu_chronicle:<5} |")
+        details.append(f"| ATHLETIC                        {self.athletic:<5} |")
+        details.append(f"| AUDIO-VISUAL LIBRARY            {self.audio_visual_lib:<5} |")
+        details.append(f"| AUSG                            {self.ausg:<5} |")
+        details.append(f"| CULTURAL FEE                    {self.cultural_fee:<5} |")
+        details.append(f"| ENERGY COST, AIRCON CLASSROOM   {self.energy_cost:<5} |")
+        details.append(f"| GUIDANCE                        {self.guidance:<5} |")
+        details.append(f"| INSURANCE FEE                   {self.insurance_fee:<5} |")
+        details.append(f"| LEARNING MANAGEMENT SYSTEM      {self.learning_man_sys:<5} |")
+        details.append(f"| LIBRARY FEE                     {self.library_fee:<5} |")
+        details.append(f"| MEDICAL AND DENTAL              {self.medical_dental:<5} |")
+        details.append(f"| REGISTRATION                    {self.registration:<5} |")
+        details.append(f"| RSO                             {self.rso:<5} |")
+        details.append(f"| STUDENT ACTIVITIES FEE          {self.students_activity:<5} |")
+        details.append(f"| STUDENT NURTURANCE FEE          {self.nurturance:<5} |")
+        details.append(f"| TECHNOLOGY FEE                  {self.technology_fee:<5} |")
+        details.append(f"| TEST PAPERS                     {self.test_paper:<5} |")
+        details.append("|------------------------------------------------|")
+        details.append(f"| Assessment Amt.:                {self.assessment_amount:<5} |")
+        details.append(f"| Downpayment:                    {self.down_payment:<5} |")
+        details.append("|------------------------------------------------|")
+        details.append(f"| Total Due:                      {self.total_due:<5} |")
+        details.append("|")
+        details.append("|")
+        details.append("|")
+        details.append("|")
+        details.append("|------------------------------------------------|")
+        details.append("|   Schedule of Payment                 |")
+        details.append("|   of outstanding balance              |")
+        details.append("|   after downpayment prior to          |")
+        details.append("|------------------------------------------------|")
+        details.append(f"| PRELIMS                    {self.prelim_payment:<5} |")
+        details.append(f"| MIDTERMS                   {self.midterm_payment:<5} |")
+        details.append(f"| FINALS                     {self.final_payment:<5} |")
+        details.append("|------------------------------------------------|")
+        details.append("       THIS IS A TEMPORARY ASSESSMENT")
         return details
 
     def display_assessment_details(self):
@@ -139,4 +151,14 @@ assessment_info += [""] * (max_length - len(assessment_info))
 
 # Display side by side
 for s_line, a_line in zip(student_info, assessment_info):
-    print(f"{s_line:<60} {a_line}")
+    print(f"{s_line:<75} {a_line}")
+
+
+
+
+
+
+
+
+
+
