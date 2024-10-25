@@ -1,4 +1,3 @@
-# This program is designed to compute the payroll salary of an employee.
 class Employee:
     hdmf = 100.00
 
