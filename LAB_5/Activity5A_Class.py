@@ -7,16 +7,20 @@ assessment = Activity5_Class.Assessment()
 
 def get_student_info(self):
     info = []
-    info.append("\t\t\t\t\tCERTIFICATE OF ENROLLMENT")
-    info.append(f"NAME  : {self.student_name:<20} STUDENT NO.: {self.student_number}")
-    info.append(f"COURSE: {self.student_course:<20} ACAD. YEAR : {self.student_year}")
+    info.append("\t\t\t\t\t\t\t\t\t\t\tCERTIFICATE OF ENROLLMENT")
+    info.append(f"NAME  : {self.student_name:<85} STUDENT NO.: {self.student_number}")
+    info.append(f"COURSE: {self.student_course:<85} ACAD. YEAR : {self.student_year}")
     info.append("-------------------------------------------------------------------")
     info.append("SECTION\t\t\t\tSUBJECT                                 UNITS")
     info.append("-------------------------------------------------------------------")
     for data in self.all_data:
         info.append(f"{data[1]:<15} {data[0]:<45} {data[2]}")
     info.append(f"                                             Total Units: {self.total_units}")
+    lines_needed = 43 - len(info)
+    info.extend([""] * lines_needed)
+    info.append("-----------------------------------------------------------------")
     info.append(f"                      Date Printed:{self.current_date}")
+    info.append("-----------------------------------------------------------------")
     return info
 
 def display_student_data(self):
@@ -30,7 +34,7 @@ def get_assessment_details(self):
     details.append("\n")
     details.append("------------------------------------------------")
     details.append("        ASSESSMENT OF FEES               ")
-    details.append("-------------------------------------------------")
+    details.append("------------------------------------------------")
     details.append(f"| TUITION FEE LECTURE           {self.all_units_fee:<5} |")
     details.append(f"| AdU CHRONICLE                   {self.adu_chronicle:<5} |")
     details.append(f"| ATHLETIC                        {self.athletic:<5} |")
@@ -58,16 +62,19 @@ def get_assessment_details(self):
     details.append("|")
     details.append("|")
     details.append("|")
+    details.append("|--|---------------------------------|-----------|")
+    details.append("|  |      Schedule of Payment        |")
+    details.append("|  |    of outstanding balance       |")
+    details.append("|  |  after downpayment prior to     |")
+    details.append(f"|  |PRELIMS                    {self.prelim_payment:<5} |")
+    details.append(f"|  |MIDTERMS                   {self.midterm_payment:<5} |")
+    details.append(f"|  |FINALS                     {self.final_payment:<5} |")
+    details.append("|--|---------------------------------|-----------|")
+    details.append("|      *There will be a 6% supercharge p.a")
+    details.append("|              for late payment")
     details.append("|------------------------------------------------|")
-    details.append("|   Schedule of Payment                 |")
-    details.append("|   of outstanding balance              |")
-    details.append("|   after downpayment prior to          |")
+    details.append("|       THIS IS A TEMPORARY ASSESSMENT")
     details.append("|------------------------------------------------|")
-    details.append(f"| PRELIMS                    {self.prelim_payment:<5} |")
-    details.append(f"| MIDTERMS                   {self.midterm_payment:<5} |")
-    details.append(f"| FINALS                     {self.final_payment:<5} |")
-    details.append("|------------------------------------------------|")
-    details.append("       THIS IS A TEMPORARY ASSESSMENT")
     return details
 
 def display_assessment_details(self):
@@ -91,7 +98,7 @@ assessment_info.extend([""] * (max_length - len(assessment_info)))
 
 # Display side by side
 for s_line, a_line in zip(student_info, assessment_info):
-    print(f"{s_line:<68} {a_line}")
+    print(f"{s_line:<65} {a_line}")
 
 
 

@@ -1,16 +1,11 @@
 class Employee:
-    hdmf = 100.00
-
-    # Initialization or constructor method of
     def __init__(self):
-        # class Employee
         self.hdmf_contribution = 100.00
         self.company_name = input("Enter Company Name: ")
         self.employee_department = input("Enter Employee Department: ")
         self.employee_name = input("Enter Employee Name: ")
         self.employee_code = input("Enter Employee Code: ")
         self.salary_cut_off = input("Enter Cut-off Date: ")
-
         # Input for salary computation
         self.emp_rate_per_hour = float(input("Employee rate per hour: "))
         self.emp_num_of_hours_per_payday = int(input("Employee's number of hours worked per payday: "))
@@ -18,11 +13,16 @@ class Employee:
         self.honorarium_pay = float(input("Employee honorarium pay: "))
         self.emp_num_of_absences = int(input("Employee absences: "))
         self.emp_num_tardiness = int(input("Employee tardiness: "))
+        self.sss_contribution = 0.00
+        self.philhealth_contribution = 0.00
+        self.tax_contribution = 0.00
+        self.deduction = 0.00
+        self.net_pay = 0.00
 
     def emp_salary_computation(self):
         self.basic_pay = self.emp_rate_per_hour * self.emp_num_of_hours_per_payday
-        self.ovetime_pay = self.emp_hour_overtime * self.emp_rate_per_hour
-        self.emp_gross_earnings = self.basic_pay + self.ovetime_pay + self.honorarium_pay
+        self.overtime_pay = self.emp_hour_overtime * self.emp_rate_per_hour
+        self.emp_gross_earnings = self.basic_pay + self.overtime_pay + self.honorarium_pay
         self.emp_absences = self.emp_num_of_absences * self.emp_rate_per_hour
         self.emp_tardiness = self.emp_num_tardiness * self.emp_rate_per_hour
 
@@ -81,7 +81,7 @@ class Employee:
         print("Employee Code:", self.employee_code)
         print("Cut-Off Date:", self.salary_cut_off)
         print("Basic Pay: %.2f" % self.basic_pay)
-        print("Overtime Pay: %.2f" % self.ovetime_pay)
+        print("Overtime Pay: %.2f" % self.overtime_pay)
         print("Gross Income: %.2f" % self.emp_gross_earnings)
         print("Absences: %.2f" % self.emp_absences)
         print("Tardiness: %.2f" % self.emp_tardiness)
