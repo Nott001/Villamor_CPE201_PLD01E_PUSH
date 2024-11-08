@@ -81,7 +81,6 @@ def display_assessment_details(self):
     for line in self.get_assessment_details():
         print(line)
 
-# Add these methods to the respective classes dynamically
 Activity5_Class.Student.get_student_info = get_student_info
 Activity5_Class.Student.display_student_data = display_student_data
 Activity5_Class.Assessment.get_assessment_details = get_assessment_details
@@ -91,7 +90,7 @@ Activity5_Class.Assessment.display_assessment_details = display_assessment_detai
 student_info = student.get_student_info()
 assessment_info = assessment.get_assessment_details()
 
-# Adjust lengths to ensure alignment
+
 max_length = max(len(student_info), len(assessment_info))
 student_info.extend([""] * (max_length - len(student_info)))
 assessment_info.extend([""] * (max_length - len(assessment_info)))
