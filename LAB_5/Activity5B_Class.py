@@ -19,7 +19,6 @@ def get_student_info(self):
     info.append(f"                      Date Printed:{self.current_date}")
     info.append("-----------------------------------------------------------------")
     return info
-
 def display_student_data(self):
     for line in self.get_student_info():
         print(line)

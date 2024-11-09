@@ -99,6 +99,12 @@ assessment_info.extend([""] * (max_length - len(assessment_info)))
 for s_line, a_line in zip(student_info, assessment_info):
     print(f"{s_line:<65} {a_line}")
 
+    def customer_info_display(self):
+        print(f"|   Service ID Number : {self.customer_account_num}")
+    def balance_from_prev_bill_info(self):
+        if self.balance_prev_bill == 0.00:
+            print(f"")
+
 
 
 
