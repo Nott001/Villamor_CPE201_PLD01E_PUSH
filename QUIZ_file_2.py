@@ -3,13 +3,11 @@ customer = QUIZ_PLDL_VILLAMOR.CustomerInfo()
 billing = QUIZ_PLDL_VILLAMOR.BillingInfo(customer)
 
 def display_all_data():
-    customer_info = QUIZ_PLDL_VILLAMOR.CustomerInfo()
-
     print("\n==================== Electric Bill ====================\n")
-    print(f"Summary for Customer Account Number (CAN) {customer_info.customer_account_num}\n")
-    print(f"Customer Name :{customer_info.customer_name}")
+    print(f"Summary for Customer Account Number (CAN) {customer.customer_account_num}\n")
+    print(f"Customer Name :{customer.customer_name}")
     print(
-        f"Address       :{customer_info.customer_street_add}, {customer_info.customer_barangay}, {customer_info.customer_city}\n")
+        f"Address       :{customer.customer_street_add}, {customer.customer_barangay}, {customer.customer_city}\n")
 
     print(f"|  Previous Balance  |  ", end="")
     if billing.balance_prev_bill == 0:
@@ -25,11 +23,11 @@ def display_all_data():
     print("\n|----------------------------------------------|")
     print("|                Service Info                  |")
     print("|----------------------------------------------|")
-    print(f"|Service ID Number       : {customer_info.customer_account_num}")
+    print(f"|Service ID Number       : {customer.customer_account_num}")
     print(f"|Rate                    : {billing.customer_rate}")
-    print(f"|Contract In The Name of : {customer_info.customer_name}")
+    print(f"|Contract In The Name of : {customer.customer_name}")
     print(
-        f"|Service Address         : {customer_info.customer_street_add}, {customer_info.customer_barangay}, {customer_info.customer_city}\n")
+        f"|Service Address         : {customer.customer_street_add}, {customer.customer_barangay}, {customer.customer_city}\n")
 
     print("\n")
     print("|----------------------------------------------|")
