@@ -17,27 +17,27 @@ class design_gui_interface():
     def __init__(self, frame1=None):
         self.frame1 = frame1
     def frames1(self, x, y):
-        self.frame1 = Frame(window, width=400, height=250, border=5,
+        self.frame1 = Frame(window, width=425, height=250, border=5,
                             bg='#B0E0E6')
         self.frame1.place(x=x, y=y)
 
     def frames2(self, x, y):
-        self.frame1 = Frame(window, width=400, height=150, border=5,
+        self.frame1 = Frame(window, width=425, height=150, border=5,
                             bg='#B0E0E6')
         self.frame1.place(x=x, y=y)
 
     def frames3(self, x, y):
-        self.frame1 = Frame(window, width=400, height=120, border=5,
+        self.frame1 = Frame(window, width=425, height=120, border=5,
                             bg='#B0E0E6')
         self.frame1.place(x=x, y=y)
 
     def frames4(self, x, y):
-        self.frame1 = Frame(window, width=400, height=200, border=5,
+        self.frame1 = Frame(window, width=425, height=200, border=5,
                             bg='#B0E0E6')
         self.frame1.place(x=x, y=y)
 
     def frames5(self, x, y):
-        self.frame1 = Frame(window, width=400, height=160, border=5,
+        self.frame1 = Frame(window, width=425, height=160, border=5,
                             bg='#B0E0E6')
         self.frame1.place(x=x, y=y)
 
@@ -75,23 +75,23 @@ class design_gui_interface():
 my_gui_design = design_gui_interface()
 #call frames attribute within the class named as design_gui_interface
 #call for frame 1
-my_gui_design.frames1(550, 100)
+my_gui_design.frames1(525, 100)
 #call for frame 2
-my_gui_design.frames2(550, 360)
+my_gui_design.frames2(525, 360)
 #call for frame 3
-my_gui_design.frames2(550, 520)
+my_gui_design.frames2(525, 520)
 #call for frame 4
-my_gui_design.frames2(550, 680)
+my_gui_design.frames2(525, 680)
 #call for frame 5
-my_gui_design.frames3(550, 840)
+my_gui_design.frames3(525, 840)
 #call for frame 6
-my_gui_design.frames1(1100, 100)
+my_gui_design.frames1(1000, 100)
 #call for frame 7
-my_gui_design.frames4(1100, 360)
+my_gui_design.frames4(1000, 360)
 #call for frame 8
-my_gui_design.frames1(1100, 570)
+my_gui_design.frames1(1000, 570)
 #call for frame 9
-my_gui_design.frames3(1100, 840)
+my_gui_design.frames3(1000  , 840)
 
 
 
