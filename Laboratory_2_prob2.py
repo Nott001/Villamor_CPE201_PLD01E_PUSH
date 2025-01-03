@@ -43,6 +43,7 @@ net_income = gross_income - total_deduction
 # Displaying the calculated information
 print(f"Employee Name: {employee_name}")
 print(f"Employee department: {employee_dep}")
-print(f"Net income: {net_income}")
-print(f"Gross income: {gross_income}")
+print(f"Net income: {net_income:.2f}")
+print(f"Gross Income: {gross_income:.2f}")
 print(f"Total deduction: {total_deduction}")
+print(type(employee_name))

@@ -87,8 +87,8 @@ Activity5_Class.Assessment.get_assessment_details = get_assessment_details
 Activity5_Class.Assessment.display_assessment_details = display_assessment_details
 
 # Display student and assessment information
-student_info = student.get_student_info()
-assessment_info = assessment.get_assessment_details()
+student_info = get_student_info(student)
+assessment_info = get_assessment_details(assessment)
 
 
 max_length = max(len(student_info), len(assessment_info))
