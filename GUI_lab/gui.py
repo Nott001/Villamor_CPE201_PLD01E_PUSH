@@ -25,7 +25,6 @@ class GUIdesign:
         self.frame1 = tk.Frame(self.window, width=width, height=height, border=300, bg=bg)
         self.frame1.place(x=x, y=y)
 
-
     def textbox_design(self, x, y, width, height, fg, bg, font):
         self.textbox = tk.Text (width=width, height= height, fg=fg, bg=bg,font=font, border=2, pady=3)
         self.textbox.place(x=x, y=y)
@@ -39,7 +38,6 @@ class GUIdesign:
         self.text_value = text_value
         self.lbl = tk.Label(text=text_value, bg=bg, font=font, fg=fg)
         self.lbl.place(x=x, y=y)
-
 
     def button_design(self, x, y, width, height, bg, text):
         self.upload_button = tk.Button(width=width, height=height, pady=2, text=text,
@@ -94,7 +92,6 @@ class GUIdesign:
 
         # Pack the table into the frame
         self.table.pack(side="left", fill="both", expand=True)
-
 
     def add_row_to_table(self, row_data):
         """Add a new row of data to the table."""

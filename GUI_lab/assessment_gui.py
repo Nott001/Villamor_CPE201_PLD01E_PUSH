@@ -1,8 +1,6 @@
 import gui
 import tkinter as tk
 from PIL import Image, ImageTk
-from tkinter import ttk
-
 
 window = tk.Tk()
 window.title("Student Assessment Page")
@@ -66,7 +64,6 @@ gui_design.add_row_to_table(rows_6)
 gui_design.frames(44, 550, 1800, 35, 'white')
 gui_design.label_design(44, 557, 'TOTAL:','white', ('HedvigLettersSerif.ttf', 10))
 
-
 #tuition assessment
 gui_design.frames(44, 600, 1800, 390, 'white')
 gui_design.frames(543, 945, 445, 1, 'black')
@@ -112,6 +109,5 @@ gui_design.textbox_design(1120, 890, 30, 1, 'black', 'white', ('HedvigLettersSer
 gui_design.textbox_design(1120, 911, 30, 1, 'black', 'white', ('HedvigLettersSerif.ttf', 10))
 
 gui_design.frames(0, 990, 1920, 25, '#A70000')
-
 
 window.mainloop()

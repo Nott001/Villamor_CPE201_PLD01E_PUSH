@@ -9,6 +9,7 @@ gui_design = gui_project.GUIdesign(window)
 
 #Addition of white colored frame
 gui_design.frames(550, 0, 853, 1080, 'white')
+gui_design.frames( 582, 157, 210, 190, 'grey')
 
 #textbox
 employee_number_box = gui_design.textbox_design(767, 361, 23, 1, 'black', 'white', ('Calibri', 10))

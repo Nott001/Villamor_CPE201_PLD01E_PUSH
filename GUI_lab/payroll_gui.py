@@ -1,8 +1,6 @@
 import gui
 import tkinter as tk
 from PIL import Image, ImageTk
-from tkinter import ttk
-
 
 window = tk.Tk()
 window.title("Payroll page")
@@ -19,29 +17,23 @@ gui_design = gui.GUIdesign(window)
 #Addition of white colored frame
 gui_design.frames(550, 0, 853, 1080, 'white')
 
-
 employee_number_box = gui_design.textbox_design(767, 361, 23, 1, 'black', 'white', ('Calibri', 10))
 department_box = gui_design.textbox_design(767, 423, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
-
 
 rate_hour_basic_box = gui_design.textbox_design(767, 490, 23, 1, 'black', 'white', ('Calibri', 10))
 no_hrs_cutoff_basic_box = gui_design.textbox_design(767, 519, 23, 1, 'black', 'white', ('Calibri', 10))
 income_cutoff_basic_box = gui_design.textbox_design(767, 549, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
 
-
 rate_hour_honor_box = gui_design.textbox_design(767, 627, 23, 1, 'black', 'white', ('Calibri', 10))
 no_hrs_cutoff_honor_box = gui_design.textbox_design(767, 656, 23, 1, 'black', 'white', ('Calibri', 10))
 income_cutoff_honor_box = gui_design.textbox_design(767, 685, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
-
 
 rate_hour_other_box = gui_design.textbox_design(767, 765, 23, 1, 'black', 'white', ('Calibri', 10))
 no_hrs_cutoff_other_box = gui_design.textbox_design(767, 794, 23, 1, 'black', 'white', ('Calibri', 10))
 income_cutoff_other_box = gui_design.textbox_design(767, 823, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
 
-
 gross_income_box = gui_design.textbox_design(767, 901, 23, 1, 'black', 'white', ('Calibri', 10))
 net_income_box = gui_design.textbox_design(767,930, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
-
 
 first_name_box = gui_design.textbox_design(1172,151, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
 middle_name_box = gui_design.textbox_design(1172,184, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
@@ -52,12 +44,10 @@ paydate_box = gui_design.textbox_design(1172,325, 23, 1, 'black', 'white', ('Cal
 employee_status_box = gui_design.textbox_design(1172,358, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
 designation_box = gui_design.textbox_design(1172,391, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
 
-
 sss_cont_box = gui_design.textbox_design(1172,490, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
 philhealth_cont_box = gui_design.textbox_design(1172,519, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
 pagibig_cont_box = gui_design.textbox_design(1172,549, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
 income_tax_cont_box = gui_design.textbox_design(1172,578, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
-
 
 sss_loan_box = gui_design.textbox_design(1172,658, 23, 1, 'black', 'white', ('Calibri', 10))
 pagibig_loan_box = gui_design.textbox_design(1172,691, 23, 1, 'black', 'white', ('Calibri', 10))
@@ -65,7 +55,6 @@ faculty_savings_dep_box = gui_design.textbox_design(1172,724, 23, 1, 'black', 'w
 faculty_savings_loan_box = gui_design.textbox_design(1172,757, 23, 1, 'black', 'white', ('Calibri', 10))
 salary_loan_box = gui_design.textbox_design(1172,790, 23, 1, 'black', 'white', ('Calibri', 10))
 other_loans_box= gui_design.textbox_design(1172,823, 23, 1, 'black', 'white', ('Calibri', 10))
-
 
 total_deductions = gui_design.textbox_design(1172,901, 23, 1, 'black', '#D4D4D4', ('Calibri', 10))
 
@@ -89,7 +78,7 @@ mid_name_text = gui_design.label_design(1015, 183, 'Middle Name:', 'white', ('Ca
 surname_text = gui_design.label_design(1015, 216, 'Surname:', 'white', ('Calibri', 10))
 civilstat_text = gui_design.label_design(1015, 249, 'Civil Status:', 'white', ('Calibri', 10))
 qualified_dep_text = gui_design.label_design(1015, 282, 'Qualified Dependents:', 'white', ('Calibri', 10))
-qualified_dep_text = gui_design.label_design(1015, 300, 'Status:', 'white', ('Calibri', 10))
+emp_status_text = gui_design.label_design(1015, 300, 'Status:', 'white', ('Calibri', 10))
 paydate_text = gui_design.label_design(1015, 324, 'Paydate:', 'white', ('Calibri', 10))
 employee_stat_text = gui_design.label_design(1015, 357, 'Employee Status:', 'white', ('Calibri', 10))
 designation_text = gui_design.label_design(1015, 390, 'Designation:', 'white', ('Calibri', 10))
